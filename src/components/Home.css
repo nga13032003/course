@@ -1,0 +1,312 @@
+
+.ant-layout {
+  min-height: 100vh;
+  background: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-layout-header,
+.ant-layout-footer {
+  background: #ffffff !important;
+  color: #252626;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.ant-layout-header {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 40px !important;
+}
+
+.ant-layout-header img {
+  height: 40px;
+  margin-right: 24px;
+}
+
+.ant-layout-header .ant-menu {
+  flex: 1;
+  background: transparent !important;
+  border-bottom: none !important;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.ant-layout-header .ant-menu-item-selected {
+  background-color: #d5d5d5 !important;
+  border-radius: 4px;
+}
+
+.ant-layout-header .ant-input {
+  width: 220px !important;
+  border-radius: 20px;
+}
+
+.ant-layout-header .ant-badge {
+  margin-right: 20px;
+}
+
+.ant-layout-header .ant-avatar {
+  background-color: #1890ff;
+}
+
+.ant-layout-footer {
+  padding: 24px 40px !important;
+  font-size: 1rem;
+}
+
+/* === Main Content === */
+.site-content {
+  flex: 1;
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Banner === */
+.site-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('../assets/images/coure_data_1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  padding: 60px 40px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 48px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.site-banner h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.site-banner p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.site-banner .ant-btn-primary {
+  padding: 12px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(24, 144, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.site-banner .ant-btn-primary:hover {
+  background-color: #40a9ff;
+  box-shadow: 0 6px 14px rgba(24, 144, 255, 0.9);
+}
+
+/* === Introduction Section === */
+.site-intro {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.site-intro h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #001529;
+}
+
+.site-intro p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #595959;
+  line-height: 1.6;
+}
+
+/* === Course Cards === */
+.my-courses .ant-card,
+.recommended-courses .ant-card,
+.upcoming-courses .ant-card {
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  color: #001529;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my-courses .ant-card:hover,
+.recommended-courses .ant-card:hover,
+.upcoming-courses .ant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.my-courses .ant-card-cover img,
+.recommended-courses .ant-card-cover img,
+.upcoming-courses .ant-card-cover img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.my-courses .ant-card-meta-title,
+.recommended-courses .ant-card-meta-title,
+.upcoming-courses .ant-card-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 12px 0;
+}
+
+.my-courses .ant-btn-link {
+  font-weight: 600;
+  color: #1890ff;
+  transition: color 0.3s ease;
+}
+
+.my-courses .ant-btn-link:hover {
+  color: #40a9ff;
+}
+
+.recommended-courses .ant-card-meta-description {
+  color: #404040;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.recommended-courses .ant-btn-primary,
+.upcoming-courses .ant-btn-dashed {
+  border-radius: 24px;
+  font-weight: 600;
+  margin-top: 14px;
+  padding: 8px 20px;
+}
+
+.upcoming-courses p {
+  font-size: 1rem;
+  color: #595959;
+  margin-bottom: 16px;
+}
+
+/* === Attention Box === */
+@keyframes attentionFadeIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.attention-box {
+  background: #fff7e6;
+  border-left: 5px solid #faad14;
+  padding: 16px 24px;
+  border-radius: 8px;
+  margin: 40px auto;
+  color: #ad6800;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(250, 173, 20, 0.3);
+  max-width: 900px;
+  font-size: 1.1rem;
+  animation: attentionFadeIn 0.8s ease;
+  position: relative;
+}
+
+.attention-box::before {
+  content: "⚡";
+  display: inline-block;
+  margin-right: 8px;
+  animation: wiggle 1s infinite;
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+  .ant-layout-header {
+    flex-wrap: wrap !important;
+    height: auto !important;
+    padding: 16px 24px !important;
+  }
+  .ant-layout-header .ant-menu {
+    flex-basis: 100%;
+    margin-bottom: 12px;
+  }
+  .ant-layout-header .ant-input {
+    width: 100% !important;
+    margin-bottom: 12px !important;
+  }
+  .site-content {
+    padding: 24px 20px;
+  }
+  .my-courses .ant-card-cover img,
+  .recommended-courses .ant-card-cover img,
+  .upcoming-courses .ant-card-cover img {
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-banner h1 {
+    font-size: 2.5rem;
+  }
+  .site-banner p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .site-banner .ant-btn-primary {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+  .site-intro h3 {
+    font-size: 1.8rem;
+  }
+  .site-intro p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .ant-layout-header img {
+    height: 32px;
+    margin-right: 16px;
+  }
+  .ant-layout-header .ant-menu-item-selected {
+    font-size: 14px;
+  }
+  .site-intro h3 {
+    font-size: 1.6rem;
+  }
+  .site-intro p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+}
+.attention-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ff4d4f;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  animation: pulse 1.5s infinite;
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 10; 
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
